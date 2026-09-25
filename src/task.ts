@@ -14,10 +14,7 @@ export const catalogoProdutos: Produto[] = [
   { id: 3, nome: "Teclado Mecânico", preco: 350, ativo: false },
 ];
 
-/**
- * Simula uma chamada assíncrona (como uma API ou banco de dados)
- * Retorna uma Promise que resolve após um tempo simulado (setTimeout).
- */
+//Simula uma chamada assíncrona
 export function buscarProdutoPorId(id: number): Promise<Produto> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -31,17 +28,7 @@ export function buscarProdutoPorId(id: number): Promise<Produto> {
   });
 }
 
-/**
- * Função assíncrona utilizando async/await
- * 
- * FLUXO ASSÍNCRONO EXPLICADO:
- * 1. A função é declarada como 'async', o que significa que ela sempre retornará uma Promise implicitamente.
- * 2. Quando o interpretador chega na linha 'await buscarProdutoPorId(id)', a execução desta função específica é pausada (suspensa).
- * 3. O controle do thread principal é devolvido ao ambiente (Event Loop), permitindo que outras operações síncronas continuem rodando sem travar a aplicação.
- * 4. A Promise é enviada para processamento em segundo plano. Enquanto isso, o restante da função aguarda na fila de microtarefas (Microtask Queue).
- * 5. Assim que a Promise é resolvida (ou rejeitada) após o atraso do setTimeout, o resultado é devolvido e a execução da função é retomada exatamente na linha seguinte ao 'await'.
- * 6. O bloco try/catch captura tanto o sucesso quanto possíveis exceções de forma síncrona visualmente, mas assíncrona na prática.
- */
+//Função assíncrona utilizando async/await
 export async function processarConsultaProduto(id: number): Promise<string> {
   try {
     // Pausa a execução até que a Promise seja resolvida

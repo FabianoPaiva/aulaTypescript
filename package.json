@@ -1,18 +1,31 @@
 {
   "name": "aulatypescript",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "tsx ./src/index.ts",
+    "start": "node .",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianoPaiva/aulaTypescript.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/FabianoPaiva/aulaTypescript/issues"
+  },
+  "homepage": "https://github.com/FabianoPaiva/aulaTypescript#readme",
   "devDependencies": {
+    "@types/node": "^26.6.3",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.2"
   }
 }
