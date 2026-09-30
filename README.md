@@ -11,12 +11,14 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu sistema antes de
 * **npm** (geralmente instalado junto com o Node.js) ou **Yarn** / **pnpm**
 
 Para verificar se o Node e o npm estão instalados, execute no seu terminal:
-```bash
+```
 node -v
 npm -v
+```
 
 ---
 
 ## comando para roda o projeto na pasta raiz:
-
+```
 npx vitest run
+```
